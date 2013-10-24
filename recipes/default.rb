@@ -35,10 +35,14 @@ bash "sublime_install" do
   end
 end
 
-link node["sublime"]["install_alias"] do
-  to ::File.join(node["sublime"]["install_prefix"], node["sublime"]["install_directory"], "sublime_text")
+template node["sublime"]["install_alias"] do
+  mode 0655
+  owner "root"
+  group "root"
 
-  only_if do
-    node["sublime"]["install_alias"]
-  end
+  source "executable.erb"
+
+  variables(
+    node["sublime"]
+  )
 end
