@@ -45,4 +45,8 @@ template node["sublime"]["install_alias"] do
   variables(
     node["sublime"]
   )
+
+  only_if do
+    node["sublime"]["install_alias"]
+  end
 end
