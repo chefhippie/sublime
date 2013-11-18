@@ -23,3 +23,4 @@ default["sublime"]["file_download"] = "http://c758482.r82.cf2.rackcdn.com/#{node
 default["sublime"]["install_directory"] = "sublime"
 default["sublime"]["install_prefix"] = "/opt"
 default["sublime"]["install_alias"] = "/usr/local/bin/subl"
+default["sublime"]["desktop_file"] = "/usr/share/applications/sublime.desktop"

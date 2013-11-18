@@ -50,3 +50,18 @@ template node["sublime"]["install_alias"] do
     node["sublime"]["install_alias"]
   end
 end
+
+template node["sublime"]["desktop_file"] do
+  source "app.desktop.erb"
+  owner "root"
+  group "root"
+  mode 0644
+
+  variables(
+    node["sublime"]
+  )
+
+  only_if do
+    node["sublime"]["desktop_file"]
+  end
+end
