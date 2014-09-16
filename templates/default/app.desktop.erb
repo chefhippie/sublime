@@ -1,9 +1,24 @@
 [Desktop Entry]
-Name=Sublime Text Editor
-Comment=Sublime Text Editor
-Exec="<%= @install_prefix %>/<%= @install_directory %>/sublime_text" %F
-MimeType=text/plain;
-Terminal=false
+Version=1.0
 Type=Application
+Name=Sublime Text
+GenericName=Text Editor
+Comment=Sophisticated text editor for code, markup and prose
+Exec=<%= @install_prefix %>/<%= @install_directory %>/sublime_text %F
+Terminal=false
+MimeType=text/plain;
 Icon=<%= @install_prefix %>/<%= @install_directory %>/Icon/256x256/sublime_text.png
-Categories=TextEditor;Development;Utility;
+Categories=TextEditor;Development;
+StartupNotify=true
+Actions=Window;Document;
+
+[Desktop Action Window]
+Name=New Window
+Exec="<%= @install_prefix %>/<%= @install_directory %>/sublime_text" -n
+OnlyShowIn=Unity;
+
+[Desktop Action Document]
+Name=New File
+Exec="<%= @install_prefix %>/<%= @install_directory %>/sublime_text" --command new_file
+OnlyShowIn=Unity;
+

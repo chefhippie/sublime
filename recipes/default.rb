@@ -24,7 +24,7 @@ end
 
 bash "sublime_install" do
   code <<-EOH
-    tar -jxvf #{node["sublime"]["file_name"]} --transform=s/Sublime\\ Text\\ 2/#{node["sublime"]["install_directory"]}/ -C #{node["sublime"]["install_prefix"]}
+    tar -jxvf #{node["sublime"]["file_name"]} --transform=s/#{node["sublime"]["file_replace"]}/#{node["sublime"]["install_directory"]}/ -C #{node["sublime"]["install_prefix"]}
   EOH
 
   cwd Chef::Config[:file_cache_path]
