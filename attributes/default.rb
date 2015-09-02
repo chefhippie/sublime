@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-default["sublime"]["version"] = "build_3065"
+default["sublime"]["version"] = "build_3083"
 default["sublime"]["file_name"] = "sublime_text_3_#{node["sublime"]["version"]}_x64.tar.bz2"
 default["sublime"]["file_download"] = "http://c758482.r82.cf2.rackcdn.com/#{node["sublime"]["file_name"]}"
 default["sublime"]["file_replace"] = "sublime_text_3"
